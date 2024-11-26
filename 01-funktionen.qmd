@@ -1,0 +1,74 @@
+---
+title: "Funktionen"
+format:
+  html:
+    embed-resources: true
+    toc: true
+execute:
+  warning: false
+editor_options: 
+  chunk_output_type: console
+editor: source
+---
+
+```{r}
+library(tidyverse)
+```
+
+## Daten 
+
+Die Daten für diese Übung sind fiktiv. Temperaturdaten wurden an zwei Orten in Fahrenheit gemessen. Das Ziel ist es die Daten in Celsius umzurechnen.
+
+```{r}
+klimadaten <- read_csv(here::here("daten/klimadaten.csv"))
+```
+
+## Daten erkunden
+
+1. Nutze dir bekannte Funktionen um die Daten zu erkunden.
+
+```{r}
+glimpse(klimadaten)
+```
+
+## Daten transformieren
+
+Der Code ist hier bereits vorbereitet. Führe ihn aus.
+
+1. Erstelle eine neue Spalte `temp_c` in der die Temperatur in Celsius gespeichert wird.
+
+```{r}
+klimadaten |> 
+    mutate(temp_c = (temp_f - 32) * 5/9)
+```
+
+## Funktion schreiben
+
+Folgend ist ein Beispiel wie eine Funktion in R definiert wird. Schaue dir das Beispiel genau an und schreibe dann die Funktion `fahrenheit_in_celsius` im nächsten Schritt.
+
+```{r}
+#| eval: false
+#| echo: true
+name <- function(x) {
+    # code
+}
+```
+
+1. Schreibe eine Funktion `fahrenheit_in_celsius`, die eine Temperatur in Fahrenheit in Celsius umrechnet.
+
+```{r}
+
+```
+
+## Funktion anwenden
+
+1. Wende die Funktion `fahrenheit_to_celsius` auf die Spalte `temp_f` im Datensatz `klimadaten` an.
+
+```{r}
+
+```
+
+## Daten kommunizieren
+
+1. Das Dokument in das HTML-Format umwandeln (Render) und eventuelle Fehler beheben
+
