@@ -50,7 +50,7 @@ Folgend ist ein Beispiel wie eine Funktion in R definiert wird. Schaue dir das B
 #| eval: false
 #| echo: true
 name <- function(x) {
-    # code
+    x # code
 }
 ```
 
